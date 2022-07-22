@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@chainlink/contracts": "^0.4.1",
+    "@nomiclabs/hardhat-ethers": "^2.1.0",
     "@openzeppelin/contracts": "^4.7.0",
     "gitignore": "^0.7.0"
   }
