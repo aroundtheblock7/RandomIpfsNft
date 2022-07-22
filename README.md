@@ -4,4 +4,7 @@
 
 ### This project was deployed to Rinkeby network and in the photos below we see the contract creation and the "request doggie" (mint) transcations in etherscan. We also see the "internal transaction hash" which was the oracle responding to the "requestDoggie" function and fufilling our request via the "fulfillRandomWords" function. We can see which random NFT "doggie" we received on opensea in photo below as well as a photo of the Chainlink VRF page which provides us the "Consumer" and "Last Fufillment" info.
 
-
+### Must set up .env file with private key and project Id if cloning and runing project
+### To compile... yarn hardhat compile
+### To deploy... yarn hardhat deploy --network rinkeby
+### To mint... yarn hardhat deploy --tags mint --network rinkeby 
