@@ -19,10 +19,10 @@ module.exports = async function (hre) {
     if (chainId == 31337) {
         //make a fake chainlink VRF node
         const vrfCoordinatorV2Mock = await ethers.getContract("VRFCoordinatorV2Mock")
-        vrfCoordinatorV2Address = VRFCoordinatorV2Mock.address
+        vrfCoordinatorV2Address = vrfCoordinatorV2Mock.address
         const tx = await vrfCoordinatorV2Mock.createSubscription()
         const txReceipt = await tx.wait(1)
-        subscriptionId = txReceipt.events[0].args.subscriptionId
+        subscriptionId = txReceipt.events[0].args.subId
         await vrfCoordinatorV2Mock.fundSubscription(subscriptionId, FUND_AMOUNT)
     } else {
         //use the real ones
